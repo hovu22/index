@@ -3,7 +3,7 @@ var router = express.Router();
 var productModel = require("../models/product");
 const product = require("../models/product");
 var upload = require("../util/upload");
-var sendMail = require("../util/Mail");
+var sendmail = require("../util/mail");
 // Thêm sản phẩm
 // POST: localhost:3000/products/add-product
 router.post("/add-product", async function (req, res) {
