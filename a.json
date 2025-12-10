@@ -1,0 +1,22 @@
+CateID          CateName             ParentID 
+CA01            Điện thoại              NULL
+CA02            Laptop                  NULL
+CA03        Điện thoại thông minh        CA01
+
+// String(text), number, null, object, true/false, array
+[
+    {
+        "CateID": "CA01",
+        "CateName": "Điện thoại",
+        "ParentID": null
+    },
+    {
+        "CateID": "CA03",
+        "CateName": "Điện thoại thông minh",
+        "ParentID": {
+            "CateID": "CA01",
+            "CateName": "Điện thoại",
+            "ParentID": null
+        }
+    }
+]
