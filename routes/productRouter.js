@@ -2,11 +2,11 @@ var express = require("express");
 var router = express.Router();
 var productModel = require("../models/product");
 const product = require("../models/product");
-var upload = require("../util/upload");
-var sendmail = require("../util/mail");
+var upload = require("../util/upload"); 
+var sendMail = require("../util/mail");
 // Thêm sản phẩm
 // POST: localhost:3000/products/add-product
-router.post("/add-product", async function (req, res) {
+router.post("/add-product", async function (req, res) { 
     try {
         const { name, description, price, quantity, status, cateID } = req.body;
         const newProduct = {
@@ -231,6 +231,8 @@ router.get("/price-20k-200k-no-socola", async (req, res) => {
     res.status(200).json({ status: true, message: "thanh cong", data: list });
 });
 
+
+
     router.post('/upload', [upload.single('hinhAnh')],
     async (req, res, next) => {
         try {
@@ -257,11 +259,11 @@ router.post("/send-mail", async function(req, res, next){
         <div style="font-family: Arial, sans-serif; background-color: #e82727ff; padding: 40px 0; margin: 0;">
           <div style="max-width: 600px; margin: 0 auto; background-color: #1a0202ff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
             
-            <div style="background-color: #aa2727ff; padding: 20px; text-align: center;">
+            <div style="background-color: #cc9090ff; padding: 20px; text-align: center;">
                  <h1 style="color: #e5d6d6ff; margin: 0; font-size: 24px;">THÔNG BÁO </h1>
             </div>
 
-            <div style="padding: 30px; color: #f2e9e9;">
+            <div style="padding: 30px; color: #a89898ff;">
               <h2 style="margin-top: 0;">Xin chào,</h2>
               
               <p style="font-size: 16px; line-height: 1.6; color: #ffffff;">
