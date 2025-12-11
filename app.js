@@ -33,7 +33,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //connect database
-mongoose.connect('mongodb+srv://vuho7248_db_user:lkZ5HXPcnWOmHLf3@cluster0.ttyam6i.mongodb.net/mgdb')
+mongoose.connect('mongodb://')
   .then(() => console.log('>>>>>>>>>> DB Connected!!!!!!'))
   .catch(err => console.log('>>>>>>>>> DB Error: ', err));
 
